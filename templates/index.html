@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+
+    First Webpage
+
+{% endblock %}
+
+{% block body %}
+
+    <p>
+        Ayyy, whaddup
+
+    </p>
+
+    <ul>
+          {% for note in notes %}
+              <li> {{ note }} </li>
+          {% endfor %}
+    </ul>
+
+    <form action=" {{ url_for('index') }}" method="post">
+        <input type="text" name = "note" placeholder = "Enter Note Here">
+        <button> Add Note! </button>
+    </form>
+
+    <a href="{{ url_for('more') }}"> Click to see for more details </a>
+
+{% endblock %}

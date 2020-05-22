@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+
+    Second Webpage
+
+{% endblock %}
+
+{% block body %}
+
+    <p>
+        well, this is not the same, is it.
+
+    </p>
+
+    <a href="{{ url_for('index') }}"> Go back, this was boring. </a>
+
+{% endblock %}
